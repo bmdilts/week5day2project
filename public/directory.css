@@ -1,0 +1,54 @@
+body{
+    font-family: sans-serif;
+}
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+.robot{
+  flex: 1 0 20%;
+  border: 1px solid grey;
+  margin: 1em;
+}
+.pic{
+  margin: 0 10% 0 10%;
+}
+.name{
+  font-weight: bold;
+  color: #4282d7;
+  text-align: left;
+  margin-left: .5em;
+}
+.title{
+  margin-left: .5em;
+}
+.hire{
+  color: red;
+  margin-left: .5em
+}
+.upper{
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 1em;
+}
+.roundPic{
+  border-radius: 50%;
+  border: 1px solid grey;
+  margin-right: 2em
+}
+.header{
+  font-weight: 300;
+  font-size: 3em;
+  margin: 0;
+}
+.userInfo{
+  margin-top: 1em;
+}
+table{
+  margin-left: 5em;
+}
+.univ{
+  margin: 0 0 0 1em;
+}

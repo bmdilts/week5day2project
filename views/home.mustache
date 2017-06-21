@@ -3,31 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Robot Directory</title>
-    <!-- <link type="text/css" src="~/public/directory.css"> -->
+    <link rel="stylesheet" href="../public/directory.css">
   </head>
   <body>
     <h1>Robot Directory</h1>
     <div class="container">
-      {{#users}}
-      <div class="robot">
-        <img class="pic" src='{{avatar}}' alt="robot picture">
-        <p class="name">{{name}}</p>
-        <p class="title">
-          {{#job}}
-            {{job}}, 
-          {{/job}}
-          {{^job}}
-            Available for hire
-          {{/job}}
-          {{#company}}
-            {{company}}
-          {{/company}}
-          {{^company}}
+        {{#users}}
+        <div class="robot">
+          <img class="pic" src='{{avatar}}' alt="robot picture">
+          <p class="name">{{name}}</p>
+          <p class="title">
+            {{#job}}
+              {{job}},
+            {{/job}}
+            {{^job}}
+              <p class="hire">
+                Available for hire
+              </p>
+            {{/job}}
+            {{#company}}
+              {{company}}
+            {{/company}}
+            {{^company}}
 
-          {{/company}}
-        </p>
-      </div>
-      {{/users}}
+            {{/company}}
+          </p>
+        </div>
+        {{/users}}
     </div>
 
   </body>

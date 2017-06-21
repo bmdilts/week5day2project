@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../public/directory.css">
+    <title>User Page</title>
+  </head>
+  <body>
+    {{#users}}
+      <div class="upper">
+        <img class="roundPic" src='{{avatar}}' alt="robot picture">
+        <div class="name_cont">
+          <h1 class="header">{{name}}</h1>
+          <p class="userInfo">
+            {{#address.city}}{{address.city}}, {{/address.city}} {{address.country}} | {{#job}}{{job}},  {{company}}{{/job}}{{^job}}<p class="hire">Available for hire</p>{{/job}}<br>
+            {{email}} | {{phone}}
+          </p>
+        </div>
+      </div>
+      <table>
+        {{#university}}
+        <tr>
+          <td><b>Education</b></td>
+          <td class="univ">{{university}}</td>
+        </tr>
+        {{/university}}
+        <tr>
+          <td><b>Skills</b></td>
+          <td>
+            <ul>
+              {{#skills}}
+                <li>
+                  {{.}}
+                </li>
+              {{/skills}}
+            </ul>
+          </td>
+        </tr>
+      </table>
+    {{/users}}
+  </body>
+</html>
